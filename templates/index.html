@@ -1,0 +1,50 @@
+<html>
+<body>
+  <p>{{ quote }}</p>
+  <p>{{ author }}</p>
+</body>
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body {
+  height: 600px;
+  width: 600px;
+  background-color: #1F1F1F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+p {
+  margin-top: auto;
+  color: white;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+
+}
+
+p:nth-child(2) {
+  position: relative;
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+p:nth-child(2)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  background: white;
+  width: 100%;
+  height: 1px;
+}
+</style>
