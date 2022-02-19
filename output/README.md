@@ -1,0 +1,1 @@
+Here, it's the folder where you images generated from the template will be saved

@@ -80,16 +80,6 @@ async function publishPostOnInstagram(photo, caption, post) {
   console.log(`link of the post: https://www.instagram.com/p/${media.code}/`)
 }
 
-// get date now
-function getDate() {
-  const date = new Date()
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  return `${day}-${month}-${year}`
-}
-
-
 async function main() {
   // Get data for the image
   let data = {}
@@ -116,10 +106,10 @@ async function main() {
   await publishPostOnInstagram(url, data.quote, 'feed')
 }
 
+// If you want to use a crod job, uncomment this
+
 // const job = new CronJob('0 12 * * *', function() {
 //   main()
 // }, null, true, 'Europe/Paris');
 
-// const job = new CronJob('* * * * *', function() {
-// }, null, true, 'Europe/Paris');
 main()
